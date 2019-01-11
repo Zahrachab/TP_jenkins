@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+    id "org.sonarqube" version "2.6.2"
+    id "com.alexleventer.slack" version "1.0.3"
+}
+
+group 'matrix'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+
+apply plugin: 'java'
+apply plugin: "jacoco"
+
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.7
+            }
+        }
+    }
+}
+
+test.finalizedBy 'jacocoTestReport', 'jacocoTestCoverageVerification'
+build.dependsOn  'javadoc'
+
+
+uploadArchives {gradle
+    repositories {
+        maven{
+            credentials {
+                username "myMavenRepo"
+                password "selin2018"
+            }
+            url "https://mymavenrepo.com/repo/eFtJ96dMKO4d1X5lOxVy/"
+        }
+    }
+}
+
+uploadArchives.dependsOn 'build'

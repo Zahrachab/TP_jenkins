@@ -1,0 +1,8 @@
+-classpath 'E:\\Java Projets\\1.0\\build\\classes\\java\\main;E:\\Java Projets\\1.0\\build\\resources\\main'
+-d 'E:\\Java Projets\\1.0\\build\\docs\\javadoc'
+-doctitle '1.0 1.0-SNAPSHOT API'
+-quiet 
+-windowtitle '1.0 1.0-SNAPSHOT API'
+'E:\\Java Projets\\1.0\\src\\main\\java\\com\\example\\exception\\NoSquareException.java'
+'E:\\Java Projets\\1.0\\src\\main\\java\\com\\example\\model\\Matrix.java'
+'E:\\Java Projets\\1.0\\src\\main\\java\\com\\example\\service\\MatrixMathematics.java'
