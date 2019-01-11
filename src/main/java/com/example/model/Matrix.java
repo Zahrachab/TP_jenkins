@@ -4,6 +4,7 @@ public class Matrix {
 
 	private int nrows;
 	private int ncols;
+	private int col;
 	private double[][] data;
 
 	public Matrix(double[][] dat) {
