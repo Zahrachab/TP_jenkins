@@ -4,70 +4,71 @@ public class Matrix {
 
 	private int nrows;
 	private int ncols;
+	private int col;
 	private double[][] data;
 
-<span class="fc" id="L9">	public Matrix(double[][] dat) {</span>
-<span class="fc" id="L10">		this.data = dat;</span>
-<span class="fc" id="L11">		this.nrows = dat.length;</span>
-<span class="fc" id="L12">		this.ncols = dat[0].length;</span>
-<span class="fc" id="L13">	}</span>
+<span class="fc" id="L10">	public Matrix(double[][] dat) {</span>
+<span class="fc" id="L11">		this.data = dat;</span>
+<span class="fc" id="L12">		this.nrows = dat.length;</span>
+<span class="fc" id="L13">		this.ncols = dat[0].length;</span>
+<span class="fc" id="L14">	}</span>
 
-<span class="fc" id="L15">	public Matrix(int nrow, int ncol) {</span>
-<span class="fc" id="L16">		this.nrows = nrow;</span>
-<span class="fc" id="L17">		this.ncols = ncol;</span>
-<span class="fc" id="L18">		data = new double[nrow][ncol];</span>
-<span class="fc" id="L19">	}</span>
+<span class="fc" id="L16">	public Matrix(int nrow, int ncol) {</span>
+<span class="fc" id="L17">		this.nrows = nrow;</span>
+<span class="fc" id="L18">		this.ncols = ncol;</span>
+<span class="fc" id="L19">		data = new double[nrow][ncol];</span>
+<span class="fc" id="L20">	}</span>
 
 	public int getNrows() {
-<span class="fc" id="L22">		return nrows;</span>
+<span class="fc" id="L23">		return nrows;</span>
 	}
 
 	public void setNrows(int nrows) {
-<span class="nc" id="L26">		this.nrows = nrows;</span>
-<span class="nc" id="L27">	}</span>
+<span class="nc" id="L27">		this.nrows = nrows;</span>
+<span class="nc" id="L28">	}</span>
 
 	public int getNcols() {
-<span class="fc" id="L30">		return ncols;</span>
+<span class="fc" id="L31">		return ncols;</span>
 	}
 
 	public void setNcols(int ncols) {
-<span class="nc" id="L34">		this.ncols = ncols;</span>
-<span class="nc" id="L35">	}</span>
+<span class="nc" id="L35">		this.ncols = ncols;</span>
+<span class="nc" id="L36">	}</span>
 
 	public double[][] getValues() {
-<span class="fc" id="L38">		return data;</span>
+<span class="fc" id="L39">		return data;</span>
 	}
 
 	public void setValues(double[][] values) {
-<span class="nc" id="L42">		this.data = values;</span>
-<span class="nc" id="L43">	}</span>
+<span class="nc" id="L43">		this.data = values;</span>
+<span class="nc" id="L44">	}</span>
 
 	public void setValueAt(int row, int col, double value) {
-<span class="fc" id="L46">		data[row][col] = value;</span>
-<span class="fc" id="L47">	}</span>
+<span class="fc" id="L47">		data[row][col] = value;</span>
+<span class="fc" id="L48">	}</span>
 
 	public double getValueAt(int row, int col) {
-<span class="fc" id="L50">		return data[row][col];</span>
+<span class="fc" id="L51">		return data[row][col];</span>
 	}
 
 	public boolean isSquare() {
-<span class="fc bfc" id="L54" title="All 2 branches covered.">		return nrows == ncols;</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">		return nrows == ncols;</span>
 	}
 
 	public int size() {
-<span class="pc bpc" id="L58" title="1 of 2 branches missed.">		if (isSquare())</span>
-<span class="fc" id="L59">			return nrows;</span>
-<span class="nc" id="L60">		return -1;</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">		if (isSquare())</span>
+<span class="fc" id="L60">			return nrows;</span>
+<span class="nc" id="L61">		return -1;</span>
 	}
 
 	public Matrix multiplyByConstant(double constant) {
-<span class="nc" id="L64">		Matrix mat = new Matrix(nrows, ncols);</span>
-<span class="nc bnc" id="L65" title="All 2 branches missed.">		for (int i = 0; i &lt; nrows; i++) {</span>
-<span class="nc bnc" id="L66" title="All 2 branches missed.">			for (int j = 0; j &lt; ncols; j++) {</span>
-<span class="nc" id="L67">				mat.setValueAt(i, j, data[i][j] * constant);</span>
+<span class="nc" id="L65">		Matrix mat = new Matrix(nrows, ncols);</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">		for (int i = 0; i &lt; nrows; i++) {</span>
+<span class="nc bnc" id="L67" title="All 2 branches missed.">			for (int j = 0; j &lt; ncols; j++) {</span>
+<span class="nc" id="L68">				mat.setValueAt(i, j, data[i][j] * constant);</span>
 			}
 		}
-<span class="nc" id="L70">		return mat;</span>
+<span class="nc" id="L71">		return mat;</span>
 	}
 	
 	

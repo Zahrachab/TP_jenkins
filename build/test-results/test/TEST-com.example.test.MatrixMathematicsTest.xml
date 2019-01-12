@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.test.MatrixMathematicsTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-01-11T23:20:25" hostname="DESKTOP-AIBPQGE" time="0.022">
+<testsuite name="com.example.test.MatrixMathematicsTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-01-12T11:31:04" hostname="DESKTOP-AIBPQGE" time="0.021">
   <properties/>
-  <testcase name="testDeterminant1" classname="com.example.test.MatrixMathematicsTest" time="0.009"/>
+  <testcase name="testDeterminant1" classname="com.example.test.MatrixMathematicsTest" time="0.008"/>
   <testcase name="testDeterminant2" classname="com.example.test.MatrixMathematicsTest" time="0.001"/>
   <testcase name="testDeterminant3" classname="com.example.test.MatrixMathematicsTest" time="0.0"/>
-  <testcase name="testCofactor1" classname="com.example.test.MatrixMathematicsTest" time="0.007"/>
+  <testcase name="testCofactor1" classname="com.example.test.MatrixMathematicsTest" time="0.008"/>
   <testcase name="testCofactor2" classname="com.example.test.MatrixMathematicsTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
