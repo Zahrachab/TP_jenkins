@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Mail notification') {
       steps {
-        emailext(subject: 'Notification', body: 'Build ....')
+        emailext(subject: 'Notification', body: 'Build ....', to: 'fz_chabanechaouch@esi.dz')
       }
     }
   }
