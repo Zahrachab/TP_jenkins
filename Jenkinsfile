@@ -7,4 +7,7 @@ pipeline {
       }
     }
   }
+  environment {
+    cmd = 'C:\\Windows\\System32'
+  }
 }
