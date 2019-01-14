@@ -3,11 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'gradle build'
+        sh 'C:\\Program Files (x86)\\gradle-4.10\\bin\\gradle build'
       }
     }
-  }
-  environment {
-    gradle = 'C:\\Program Files (x86)\\gradle-4.10\\bin'
   }
 }
