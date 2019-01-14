@@ -8,6 +8,6 @@ pipeline {
     }
   }
   environment {
-    cmd = 'C:\\Windows\\System32'
+    cmd = 'C:\\\\Windows\\\\System32'
   }
 }
