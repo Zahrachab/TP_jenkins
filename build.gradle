@@ -50,4 +50,3 @@ uploadArchives {gradle
     }
 }
 
-uploadArchives.dependsOn 'build'
