@@ -7,4 +7,7 @@ pipeline {
       }
     }
   }
+  environment {
+    gradle = 'C:\\Program Files (x86)\\gradle-4.10\\bin'
+  }
 }
