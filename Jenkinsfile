@@ -3,11 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat(script: 'gradle build', encoding: 'UTF-8')
+        sh 'gradle build'
       }
     }
-  }
-  environment {
-    cmd = 'C:\\\\Windows\\\\System32'
   }
 }
