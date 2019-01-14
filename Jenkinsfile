@@ -22,5 +22,10 @@ pipeline {
         bat 'gradle uploadArchives'
       }
     }
+    stage('Slack') {
+      steps {
+        slackSend(baseUrl: 'https://equipezahra.slack.com/services/hooks/jenkins-ci/', token: 'ODPkPjymvesSoLXg6vtc82g0', message: 'un nouveau déploiment ')
+      }
+    }
   }
 }
