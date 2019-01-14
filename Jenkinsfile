@@ -9,7 +9,7 @@ pipeline {
     }
     stage('Mail notification') {
       steps {
-        emailext(subject: 'Notification', body: 'Build ....', to: 'fz_chabanechaouch@esi.dz')
+        emailext(subject: 'Notification', body: 'Build ....', to: 'fs_berrichi@esi.dz')
       }
     }
     stage('Test reporting') {
@@ -24,7 +24,7 @@ pipeline {
     }
     stage('Slack') {
       steps {
-        slackSend(baseUrl: 'https://equipezahra.slack.com/services/hooks/jenkins-ci/', token: 'ODPkPjymvesSoLXg6vtc82g0', message: 'un nouveau déploiment ')
+        slackSend(baseUrl: 'https://equipezahra.slack.com/services/hooks/jenkins-ci/', token: 'ODPkPjymvesSoLXg6vtc82g0', message: 'un nouveau dÃ©ploiment ')
       }
     }
   }
