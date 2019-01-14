@@ -17,5 +17,10 @@ pipeline {
         jacoco(changeBuildStatus: true)
       }
     }
+    stage('Deployment') {
+      steps {
+        bat 'gradle uploadArchives'
+      }
+    }
   }
 }
